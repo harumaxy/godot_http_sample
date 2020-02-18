@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot_HTTP_Sample"
+run/main_scene="res://Scenes/HttpSample.tscn"
 config/icon="res://icon.png"
 
 [rendering]
