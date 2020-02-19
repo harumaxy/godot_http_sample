@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://rsetSample.gd" type="Script" id=1]
+
+[node name="rsetSample" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 344.0
+margin_right = -344.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RemoteRandomLabel" type="Label" parent="VBoxContainer"]
+margin_top = 206.0
+margin_right = 336.0
+margin_bottom = 220.0
+
+[node name="RemotesyncRandomLabel" type="Label" parent="VBoxContainer"]
+margin_top = 224.0
+margin_right = 336.0
+margin_bottom = 238.0
+
+[node name="RoleLabel" type="Label" parent="VBoxContainer"]
+margin_top = 242.0
+margin_right = 336.0
+margin_bottom = 256.0
+
+[node name="ConnectCount" type="Label" parent="VBoxContainer"]
+margin_top = 260.0
+margin_right = 336.0
+margin_bottom = 274.0
+
+[node name="Server" type="Button" parent="VBoxContainer"]
+margin_top = 278.0
+margin_right = 336.0
+margin_bottom = 298.0
+text = "Server"
+
+[node name="Client" type="Button" parent="VBoxContainer"]
+margin_top = 302.0
+margin_right = 336.0
+margin_bottom = 322.0
+text = "Client"
+
+[node name="Disconnect" type="Button" parent="VBoxContainer"]
+margin_top = 326.0
+margin_right = 336.0
+margin_bottom = 346.0
+text = "Disconnect"
+
+[node name="RemoteRandom" type="Button" parent="VBoxContainer"]
+margin_top = 350.0
+margin_right = 336.0
+margin_bottom = 370.0
+text = "remote Random"
+
+[node name="RemoteSyncRandom" type="Button" parent="VBoxContainer"]
+margin_top = 374.0
+margin_right = 336.0
+margin_bottom = 394.0
+text = "remotesync Random"
+[connection signal="pressed" from="VBoxContainer/Server" to="." method="_on_Server_pressed"]
+[connection signal="pressed" from="VBoxContainer/Client" to="." method="_on_Client_pressed"]
+[connection signal="pressed" from="VBoxContainer/Disconnect" to="." method="_on_Disconnect_pressed"]
+[connection signal="pressed" from="VBoxContainer/RemoteRandom" to="." method="_on_Random_pressed"]
+[connection signal="pressed" from="VBoxContainer/RemoteSyncRandom" to="." method="_on_RemoteSyncRandom_pressed"]

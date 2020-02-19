@@ -4,6 +4,9 @@ const UP = Vector2.UP
 var motion = Vector2.ZERO
 var speed = 200
 
+remote var remoteval = Vector2.ZERO
+
+
 slave func setPos(pos: Vector2):
 	self.position = pos
 
@@ -19,6 +22,7 @@ func _physics_process(delta):
 	if is_network_master():	
 		move_and_slide(motion, UP)
 		rpc_unreliable("setPos", self.position)
+		
 		if Input.is_key_pressed(KEY_Q):
 			shutItDown()
 		
