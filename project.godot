@@ -19,6 +19,10 @@ config/name="Godot_HTTP_Sample"
 run/main_scene="res://Scenes/HttpSample.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+globals="*res://Scripts/globals.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
