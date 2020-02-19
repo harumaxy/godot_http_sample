@@ -1,18 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/HttpSample.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/NotoSansCJKjp-Regular.otf" type="DynamicFontData" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
-
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
+[ext_resource path="res://Scripts/HttpSample.gd" type="Script" id=1]
+[ext_resource path="res://HttpSample.tres" type="Theme" id=2]
 
 [node name="HttpSample" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 2 )
+theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -48,11 +42,11 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 227.0
-margin_top = 47.0
-margin_right = 266.0
-margin_bottom = 72.0
-text = "TEST"
+margin_left = 116.0
+margin_top = 44.0
+margin_right = 378.0
+margin_bottom = 75.0
+text = "Recieved Data is shown here"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false

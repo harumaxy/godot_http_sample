@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ENetServer.gd" type="Script" id=1]
+
+[node name="ENetSampleServer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -100.36
+margin_right = 20.0
+margin_bottom = -86.3601
+text = "Status"
+
+[node name="UserCountLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+text = "UserCount"
+
+[node name="UserIdLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 38.4719
+margin_right = 47.0
+margin_bottom = 52.4719
+text = "UserId"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -283.0
+margin_top = -134.0
+margin_right = 63.0
+margin_bottom = -61.0
+
+[node name="SendButton" type="Button" parent="."]
+anchor_left = 0.562
+anchor_top = 0.777
+anchor_right = 0.562
+anchor_bottom = 0.898
+margin_left = -0.488037
+margin_top = -0.200012
+margin_right = 118.512
+margin_bottom = 0.199951
+text = "Send"
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="SendButton" to="." method="_on_SendButton_pressed"]
